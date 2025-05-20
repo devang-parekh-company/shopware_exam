@@ -1,0 +1,26 @@
+{% block sw_cms_el_config_text %}
+	<div class="sw-cms-el-config-text">
+		<div class="sw-cms-el-config-text__repeater">
+			<div class="sw-cms-el-config-text__repeater-container">
+				<fieldset v-for="(item, index) in element.config.name.value" :key="index" :class="`sw-cms-el-config-text__repeater-item  d-flex align-items-center element-item[${index}]`">
+					<legend>Element
+						{{index +1 }}</legend>
+					<div class="row w-100">
+						<div class="col-md-5">
+							<sw-text-field :value="element.config.name.value[index]?.[`name_${index}`] ?? ''" :label="Text" :name="`name_${index}`" :allow-inline-data-mapping="true" :sanitize-info-warn="true" enable-transparent-background @change="onInputName(index)" @blur="onBlurName(index)"></sw-text-field>
+						</div>
+						<div class="col-md-5">
+							<sw-text-field :value="element.config.link.value[index]?.[`link_${index}`] ?? ''" :label="Link" :name="`link_${index}`" :allow-inline-data-mapping="true" :sanitize-info-warn="true" enable-transparent-background @change="onInputLink(index)" @blur="onBlurLink(index)"></sw-text-field>
+						</div>
+						<div v-if="index>0" class="col-md-2">
+							<button :class="`sw-cms-el-config-text__repeater-item-delete-${index} mt-4 sw-button sw-button--danger sw-button--small`" @click="remove(index)">
+								<span class="sw-button__name">Remove</span>
+							</button>
+						</div>
+					</div>
+				</fieldset>
+				<sw-button class="sw-cms-el-config-text__repeater-add" id="add-item" variant="ghost" block @click="addRepater">Add Section</sw-button>
+			</div>
+		</div>
+	</div>
+{% endblock %}

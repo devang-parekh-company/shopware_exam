@@ -1,0 +1,9 @@
+{% block sw_cms_element_custom_text_preview %}
+	{% for item in element.config.name.value %}
+		<div class="sw-cms-el-preview-custom-text">
+			<a href="{{ element.config.link.value[loop.index - 1]['link_' ~ (loop.index - 1)] }}">
+				{{ element.config.name.value[loop.index - 1]['name_' ~ (loop.index - 1)] }}
+			</a>
+		</div>
+	{% endfor %}
+{% endblock %}

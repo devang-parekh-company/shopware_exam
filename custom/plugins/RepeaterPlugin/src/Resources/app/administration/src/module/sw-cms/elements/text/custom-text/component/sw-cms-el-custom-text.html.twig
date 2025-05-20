@@ -1,0 +1,5 @@
+{% block sw_cms_element_custom_text %}
+	<div class="sw-cms-el-custom-text">
+		<sw-text-field v-for="(item, index) in element.config.name.value" :key="index" v-model="item[`name_${index}`]" :sanitize-input="true" :sanitize-field-name="'app_cms_block.template'" :enable-transparent-background="true"/>
+	</div>
+{% endblock %}
