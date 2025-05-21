@@ -1,7 +1,54 @@
-.sw-cms-el-config-text__repeater-add{
-	margin-top: 10px;
+.sw-cms-el-config-text__repeater-container {
+  margin: 20px 0;
 }
-.sw-cms-el-config-text__repeater-item{
-	border: 1px solid gray;
-	padding: 20px;
+
+.sw-cms-el-config-text__repeater-item {
+  border: 1px solid #d1d9e0;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 12px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.sw-cms-el-config-text__repeater-item:hover {
+  border-color: #189eff;
+  box-shadow: 0 0 4px rgba(24, 158, 255, 0.1);
+}
+
+.sw-cms-el-config-text__repeater-title {
+  font-weight: 600;
+  color: #52667a;
+}
+
+.sw-cms-el-config-text__repeater-icon {
+  transition: transform 0.3s ease;
+  margin-left: auto;
+}
+
+.sw-cms-el-config-text__repeater-icon.is--active {
+  transform: rotate(90deg);
+}
+.sw-content{
+    padding: 10px;    
+}
+
+.sw-cms-el-config-text__repeater-add {
+  margin-top: 16px;
+  padding: 12px;
+  border: 2px dashed #d1d9e0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.sw-cms-el-config-text__repeater-add:hover {
+  border-color: #189eff;
+  color: #189eff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
 }
